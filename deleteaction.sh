@@ -18,16 +18,16 @@ echo -e "cd \"$INPUT_WORKINGDIR\"" >> rmcmd
 if [ -n "$fileString" ]; then
   for file in $files
     do
-        echo -e "mrm -f \"$file\" 2>/dev/null; \n" >> rmcmd
-        echo -e "mrm -f \"$file\" 2>/dev/null; \n"
+        echo -e "mrm -f \"$file\" \n" >> rmcmd
+        echo -e "mrm -f \"$file\" \n"
     done
 fi
 
 if [ -n "$dirString" ]; then
     for dir in $dirs
     do
-        echo -e "rm -f -r \"$dir\" 2>/dev/null; \n" >> rmcmd
-        echo -e "rm -f -r \"$dir\" 2>/dev/null; \n"
+        echo -e "rm -f -r \"$dir\" \n" >> rmcmd
+        echo -e "rm -f -r \"$dir\" \n"
     done
 fi
 
